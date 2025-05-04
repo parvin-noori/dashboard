@@ -9,7 +9,7 @@ import { router } from './router.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <ConfigProvider theme={theme}>
+    <ConfigProvider theme={theme} direction="rtl">
      <RouterProvider router={router}/>
     </ConfigProvider>
   </StrictMode>,

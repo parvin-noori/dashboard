@@ -15,6 +15,11 @@ const { Header, Sider, Content } = Layout;
 
 const App = () => {
     const [collapsed, setCollapsed] = useState(false);
+    const handleLogOut = (e) => {
+        e.preventDefault()
+        localStorage.clear()
+        console.log('s')
+    }
     const items = [
         {
             key: 'home',
@@ -44,7 +49,7 @@ const App = () => {
         {
             key: 'sign up',
             icon: <UploadOutlined />,
-            label: <Link to="/signUp">sign up</Link>,
+            label: <Link to="/log out" onClick={handleLogOut}>log out</Link>,
         },
 
     ]
@@ -56,7 +61,7 @@ const App = () => {
             <Sider trigger={null} collapsible collapsed={collapsed}>
                 <div className="demo-logo-vertical" />
                 <Menu
-                   
+
                     mode="inline"
                     defaultSelectedKeys={['1']}
                     items={items}
