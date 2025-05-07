@@ -1,20 +1,20 @@
 
 import {
-    AppstoreOutlined,
-    BellOutlined,
     MenuFoldOutlined,
     MenuUnfoldOutlined,
-    MessageOutlined,
-    SearchOutlined,
 } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 
-import { Avatar, Button, Layout, Menu } from 'antd';
-import avatar from "/assets/imgs/avatar.png"
+import {  Button, Layout, Menu } from 'antd';
 import SearchModal from '../searchModal/SearchModal';
-import CustomDrawer from '../custom-drawer/CustomDrawer';
+import NotifDrawer from './NotifDrawer'
+import MessageDrawer from './MessageDrawer'
+import AppsDropDown from './AppsDropdown'
+import ProfileDropDown from './ProfileDropDown'
 const { Header } = Layout;
 const CustomHeader = ({ collapsed, setCollapsed }) => {
+
+
 
     const menuItemsStart = [
         {
@@ -41,15 +41,15 @@ const CustomHeader = ({ collapsed, setCollapsed }) => {
         },
         {
             key: 'message',
-            label: <MessageDrawer/>
+            label: <MessageDrawer />
         },
         {
             key: 'apps',
-            label: <Button icon={<AppstoreOutlined />} type="text" shape="circle"></Button>
+            label: <AppsDropDown />
         },
         {
             key: 'profile',
-            label: <Avatar src={avatar} />
+            label: <ProfileDropDown/>
         },
     ]
 
@@ -70,14 +70,7 @@ const CustomHeader = ({ collapsed, setCollapsed }) => {
     );
 }
 
-const NotifDrawer = () => {
-    return (<>
-        <CustomDrawer title="اعلان ها" icon={<BellOutlined />}>as</CustomDrawer>
-    </>)
-}
-const MessageDrawer = () => {
-    return (<>
-        <CustomDrawer title="پیام ها" icon={<MessageOutlined />}>asasdasdfasdf</CustomDrawer>
-    </>)
-}
+
+
+
 export default CustomHeader;
