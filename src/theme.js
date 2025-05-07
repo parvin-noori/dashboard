@@ -4,6 +4,7 @@ const token = {
     primary: "#1379f0",
     lightBlue: '#e6f4ff',
     fontFamily: "yekanBakh",
+    
 }
 
 const theme = {
@@ -28,7 +29,6 @@ const theme = {
             itemSelectedBg: token.lightBlue,
             itemSelectedColor: token.primary,
             activeBarHeight:0,
-            collapsedWidth:50
         }
     }
 }
