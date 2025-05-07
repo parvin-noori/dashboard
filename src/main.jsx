@@ -1,10 +1,10 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './index.css'
-import { ConfigProvider } from 'antd'
-import theme from './theme.js'
 import { RouterProvider } from 'react-router-dom'
+import { ConfigProvider } from 'antd'
 import { router } from './router.jsx'
+import theme from './theme.js'
+import './index.css'
 
 
 createRoot(document.getElementById('root')).render(

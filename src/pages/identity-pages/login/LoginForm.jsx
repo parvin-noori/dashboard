@@ -19,7 +19,7 @@ const LoginForm = () => {
             });
             setTimeout(() => {
 
-                navigate('/')
+                navigate('/demo1')
             }, 1000);
         } else {
 
